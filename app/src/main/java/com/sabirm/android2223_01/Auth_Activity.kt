@@ -33,7 +33,6 @@ class Auth_Ativity : AppCompatActivity() {
                         }
                     }
             }
-
         }
         btn_acceder.setOnClickListener() {
             if (et_email.text.isNotEmpty() && et_clave.text.isNotEmpty()) {
@@ -78,10 +77,10 @@ class Auth_Ativity : AppCompatActivity() {
     }
 
     private fun showHome1(email: String, provider: ProviderType) {
-        val homeIntent: Intent = Intent(this, activity_mascota::class.java).apply {
+        val homeIntent2: Intent = Intent(this, Mascota::class.java).apply {
             putExtra("email", email)
             putExtra("provider", provider.name)
         }
-        startActivity(homeIntent)
+        startActivity(homeIntent2)
     }
 }

@@ -22,7 +22,6 @@ class login : AppCompatActivity() {
         val email: String? = bundle?.getString("email")
         val provider: String? = bundle?.getString("provider")
 
-
         setup(email ?: "", provider ?: "")
     }
 
@@ -38,8 +37,10 @@ class login : AppCompatActivity() {
         btn_guardar.setOnClickListener() {
             db.collection("users").document(email).set(
                 hashMapOf(
-                    "provider" to provider, "address" to et_direccion.text.toString(),
-                    "phone" to et_telefono.text.toString(), "rol" to et_rol.text.toString()
+                    "provider" to provider,
+                    "address" to et_direccion.text.toString(),
+                    "phone" to et_telefono.text.toString(),
+                    "rol" to et_rol.text.toString()
                 )
             )
         }

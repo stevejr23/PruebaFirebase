@@ -1,6 +1,5 @@
 package com.sabirm.android2223_01
 
-import android.app.Activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -11,10 +10,8 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 //import kotlinx.android.synthetic.main.activity_main.*
 
-
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
-
     override fun onCreate(savedInstanceState: Bundle?) {
         Thread.sleep(3000)
         setTheme(R.style.Theme_Android2223_01)
@@ -38,16 +35,13 @@ class MainActivity : AppCompatActivity() {
 //            startActivity(saltarGPS)
 //        }
         btn4.setOnClickListener() {
-            var saltaFirebase: Intent = Intent(this, Auth_Ativity::class.java)
-            startActivity(saltaFirebase)
+            var saltarBase: Intent = Intent(this, Auth_Ativity::class.java)
+            startActivity(saltarBase)
         }
         btn5.setOnClickListener() {
-            var saltaMascota: Intent = Intent(this, activity_mascota::class.java)
+            var saltaMascota: Intent = Intent(this, Mascota::class.java)
             startActivity(saltaMascota)
         }
-
-
     }
-
 }
 
